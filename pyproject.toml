@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "powerfault-workflow"
+version = "0.1.0"
+description = "AI-assisted COMTRADE fault analysis with traceable sources and human review"
+keywords = ["comtrade", "power-systems", "fault-analysis", "protective-relaying", "oscillography", "ai-agents"]
+requires-python = ">=3.11"
+dependencies = ["python-docx>=1.1", "Pillow>=10"]
+license = {text = "MIT"}
+readme = "README.md"
+
+[project.scripts]
+powerfault = "powerfault.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+powerfault = ["assets/*.docx", "assets/*.json"]
+
+[project.urls]
+Repository = "https://github.com/BigDemoBear/gridfault-lens"
+Issues = "https://github.com/BigDemoBear/gridfault-lens/issues"

@@ -1,0 +1,95 @@
+{
+  "source": "PowerFault项目限定的分析与人工核查项目；不是标准规定的通用完备清单。",
+  "variables": [
+    {
+      "id": "fault_phase",
+      "name": "故障相别",
+      "default": true,
+      "scope": "装置原记载及各相波形支持的相别，分清首轮与后续故障"
+    },
+    {
+      "id": "fault_grounding",
+      "name": "接地特征",
+      "default": true,
+      "scope": "原生接地记载及直接零序、相电压电流支持的接地特征，不推断物理诱因"
+    },
+    {
+      "id": "voltage",
+      "name": "相电压",
+      "default": true,
+      "scope": "故障前、故障、切除及重合后的关键相电压；明确线路或母线测点、单位、侧别及窗口"
+    },
+    {
+      "id": "current",
+      "name": "相电流",
+      "default": true,
+      "scope": "逐相比自身故障前后及切除、重合后的电流；负荷量级不能写成停流"
+    },
+    {
+      "id": "zero_sequence_voltage",
+      "name": "直接零序电压",
+      "default": true,
+      "scope": "仅使用直接记录通道，注明原名是U0还是3U0；不新增序分量合成"
+    },
+    {
+      "id": "zero_sequence_current",
+      "name": "直接零序电流",
+      "default": true,
+      "scope": "仅使用直接记录通道，注明原名是I0还是3I0；窗口量与装置最大值分开"
+    },
+    {
+      "id": "maximum_reported_zero_sequence_current",
+      "name": "装置最大零序电流",
+      "default": true,
+      "scope": "仅取原文明确声明最大值且归属明确的量；某周波值不充当最大值"
+    },
+    {
+      "id": "maximum_reported_differential_current",
+      "name": "装置最大差动电流",
+      "default": true,
+      "scope": "仅取原文明确声明最大值且归属明确的量；没有差流通道不自行合成"
+    },
+    {
+      "id": "fault_distance",
+      "name": "装置故障距离",
+      "default": true,
+      "scope": "分装置、站端、阶段保存原生测距及单位、测距起算端；不另建定位算法"
+    },
+    {
+      "id": "protection_operation",
+      "name": "保护启动与动作",
+      "default": true,
+      "scope": "保护名称、启动或动作或复归、相别、原生时刻与时基；明确动作时间的起算事件"
+    },
+    {
+      "id": "breaker_operation",
+      "name": "断路器分合闸",
+      "default": true,
+      "scope": "出口、分合位置及相别、变位沿或观测区间；接点变化与实际停流分别记载"
+    },
+    {
+      "id": "fault_duration",
+      "name": "故障持续及切除时间",
+      "default": true,
+      "scope": "起止事件明确且可比较时才给时长；保护动作、接点变位、故障电流消失不能混称同一个时间"
+    },
+    {
+      "id": "reclose_operation",
+      "name": "重合命令与结果",
+      "default": true,
+      "scope": "重合出口、合位、重新通流及故障是否再现；未动作、失败、未覆盖分开"
+    },
+    {
+      "id": "recovery_state",
+      "name": "最终恢复状态",
+      "default": true,
+      "scope": "记录末段各相电压电流、开关状态与故障是否消失；仅对观测覆盖范围下结论"
+    },
+    {
+      "id": "phasor_relation",
+      "name": "本端相量关系",
+      "default": true,
+      "scope": "分析故障相电压电流、直接零序量的幅值与本端相对相角，并结合波形解释；相角条件不足时该项留缺，不把示例的角度或方向结论当通用判据"
+    }
+  ]
+}
